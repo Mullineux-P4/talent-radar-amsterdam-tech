@@ -21,7 +21,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-xl border-b border-white/20">
+    <nav className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button 
@@ -37,29 +37,28 @@ export function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('how-it-works')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">How It Works</button>
-            <button onClick={() => scrollToSection('approach')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Approach</button>
-            <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Services</button>
-            <button onClick={() => scrollToSection('results')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Results</button>
-            <button onClick={() => scrollToSection('testimonials')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Testimonials</button>
-            <button onClick={() => scrollToSection('connect')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Connect</button>
+            <button onClick={() => scrollToSection('how-it-works')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium">How It Works</button>
+            <button onClick={() => scrollToSection('approach')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium">Approach</button>
+            <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium">Services</button>
+            <button onClick={() => scrollToSection('results')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium">Results</button>
+            <button onClick={() => scrollToSection('testimonials')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium">Testimonials</button>
+            <button onClick={() => scrollToSection('connect')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium">Connect</button>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-white hover:text-blue-400 transition-colors duration-300"
+            className="md:hidden text-white hover:text-blue-300 transition-colors duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
           
-          <div className="hidden md:block relative">
+          <div className="hidden md:block">
             <Button 
-              className="bg-white text-black hover:bg-gray-100 font-semibold relative overflow-hidden"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300"
               onClick={() => setIsModalOpen(true)}
             >
-              <span className="relative z-10">Schedule Consultation</span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-30 animate-pulse"></div>
+              Schedule Consultation
             </Button>
           </div>
         </div>
@@ -68,14 +67,14 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-white/20">
             <div className="flex flex-col space-y-4 pt-4">
-              <button onClick={() => scrollToSection('how-it-works')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium text-left">How It Works</button>
-              <button onClick={() => scrollToSection('approach')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium text-left">Approach</button>
-              <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium text-left">Services</button>
-              <button onClick={() => scrollToSection('results')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium text-left">Results</button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium text-left">Testimonials</button>
-              <button onClick={() => scrollToSection('connect')} className="text-white hover:text-blue-400 transition-colors duration-300 font-medium text-left">Connect</button>
+              <button onClick={() => scrollToSection('how-it-works')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium text-left">How It Works</button>
+              <button onClick={() => scrollToSection('approach')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium text-left">Approach</button>
+              <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium text-left">Services</button>
+              <button onClick={() => scrollToSection('results')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium text-left">Results</button>
+              <button onClick={() => scrollToSection('testimonials')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium text-left">Testimonials</button>
+              <button onClick={() => scrollToSection('connect')} className="text-white hover:text-blue-300 transition-colors duration-300 font-medium text-left">Connect</button>
               <Button 
-                className="bg-white text-black hover:bg-gray-100 font-semibold mt-4 w-full"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold mt-4 w-full rounded-lg"
                 onClick={() => {
                   setIsModalOpen(true);
                   setIsMobileMenuOpen(false);
