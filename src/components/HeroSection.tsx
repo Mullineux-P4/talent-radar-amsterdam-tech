@@ -32,14 +32,18 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
-            Build and Maintain
+            Amsterdam's New Powerhouse
             <br />
-            <span className="text-white">High Performance Teams</span>
+            <span className="text-white">for Scale-Up Talent</span>
           </h1>
           
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Build Elite Teams Fast
+          </h2>
+          
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
-            Deploy game-changing professionals who don't just fill roles—they <strong className="text-white">transform outcomes</strong>. 
-            Access the talent market's elite in 48 hours.
+            We don't fill roles — we <strong className="text-white">deliver impact</strong>. 
+            Plug into a handpicked network of high-performers. Your next game-changer, deployed in under 48 hours.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
