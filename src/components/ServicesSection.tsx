@@ -10,57 +10,57 @@ export function ServicesSection() {
   const services = [
     {
       icon: Users,
-      title: "Independent Contractors & Subject Matter Experts",
-      subtitle: "Expert-level Contractors / Interim on-demand",
+      title: "Expert Contractors & SMEs",
+      subtitle: "Elite talent on-demand when you need it most",
       features: [
-        "Perfect fit, use-case specific for maximum impact",
-        "Low commitment, flexible engagements",
-        "Deploy in 48 hours"
+        "Laser-focused specialists who hit the ground running",
+        "Zero commitment drama, maximum flexibility",
+        "Deploy in 48 hours—because waiting is losing"
       ]
     },
     {
       icon: Target,
-      title: "Targeted Key & Multi-Hiring Solutions",
-      subtitle: "Comprehensive end-2-end hiring process management",
+      title: "Strategic Hiring Solutions",
+      subtitle: "End-to-end hiring that actually works",
       features: [
-        "Robust strategies to eliminate the no-hire risk",
-        "Comprehensive reporting, data and value added",
-        "Full-time talent in <4 weeks"
+        "Bulletproof strategies that eliminate hiring failures",
+        "Data-driven insights that justify every decision",
+        "Full-time rockstars in <4 weeks, guaranteed"
       ]
     },
     {
       icon: Briefcase,
-      title: "Outsourced Project & Program Delivery",
-      subtitle: "Structured, milestones-based and outcome-focused",
+      title: "Project Delivery Powerhouse",
+      subtitle: "Teams that deliver, not excuses",
       features: [
-        "Purpose built teams matched to your requirements",
-        "Service managed to ensure alignment with objectives",
-        "End-to-end project delivery"
+        "Purpose-built dream teams matched to your vision",
+        "Relentlessly managed to crush objectives",
+        "End-to-end delivery with zero surprises"
       ]
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+    <section id="services" className="py-20 bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Three flexible engagement models designed to accelerate your projects and unlock growth
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Three Ways We Accelerate Victory</h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto font-medium">
+            Flexible engagement models designed to <strong className="text-blue-400">crush your competition</strong> and unlock exponential growth
           </p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 h-full">
-              <service.icon className="h-12 w-12 text-blue-400 mb-6" />
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-300 mb-6 font-medium">{service.subtitle}</p>
-              <ul className="space-y-3">
+            <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-blue-500/50 hover:bg-white/15 transition-all duration-300 h-full">
+              <service.icon className="h-14 w-14 text-blue-400 mb-6" />
+              <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
+              <p className="text-gray-200 mb-6 font-medium text-lg">{service.subtitle}</p>
+              <ul className="space-y-4">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-300 text-sm">{feature}</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-3 flex-shrink-0"></div>
+                    <span className="text-gray-200 font-medium">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -71,10 +71,10 @@ export function ServicesSection() {
         <div className="text-center">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             onClick={() => setIsModalOpen(true)}
           >
-            Explore Service Options
+            Choose Your Weapon
           </Button>
         </div>
       </div>

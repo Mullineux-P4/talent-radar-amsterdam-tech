@@ -14,31 +14,31 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background elements */}
+      {/* Enhanced background with better contrast */}
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20"
         style={{
-          background: `radial-gradient(circle at ${50 + mouse.x * 10}% ${50 + mouse.y * 10}%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)`,
+          background: `radial-gradient(circle at ${50 + mouse.x * 10}% ${50 + mouse.y * 10}%, rgba(59, 130, 246, 0.4) 0%, transparent 60%)`,
         }}
       />
       
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
             Build and Maintain
             <br />
-            High Performance Teams
+            <span className="text-white">High Performance Teams</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Projekt4 provides on-demand access to the talent market to accelerate projects and unlock growth. 
-            Deploy experienced, high-impact professionals with exactly the right expertise.
+          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+            Deploy game-changing professionals who don't just fill roles—they <strong className="text-white">transform outcomes</strong>. 
+            Access the talent market's elite in 48 hours.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => setIsModalOpen(true)}
             >
               Deploy Experts in 48 Hours
@@ -47,27 +47,27 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4"
+              className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4 font-semibold backdrop-blur-sm"
             >
               View Success Stories
             </Button>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <Zap className="h-8 w-8 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Speed</h3>
-              <p className="text-gray-300">Deploy experts in 48 hours or hire full-time talent in &lt;4 weeks</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <Zap className="h-10 w-10 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-3 text-white">Speed That Kills Competition</h3>
+              <p className="text-gray-200 font-medium">Deploy experts in 48 hours or hire full-time talent in &lt;4 weeks</p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <Target className="h-8 w-8 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Results-Driven</h3>
-              <p className="text-gray-300">Impact focused to drive demonstrable customer ROI</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <Target className="h-10 w-10 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-3 text-white">Results That Matter</h3>
+              <p className="text-gray-200 font-medium">Impact-focused delivery that drives measurable ROI from day one</p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <Users className="h-8 w-8 text-green-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Quality</h3>
-              <p className="text-gray-300">Pre-vetted, experienced professionals with proven expertise</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <Users className="h-10 w-10 text-green-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-3 text-white">Elite Talent Only</h3>
+              <p className="text-gray-200 font-medium">Battle-tested professionals with proven track records</p>
             </div>
           </div>
         </div>

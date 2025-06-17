@@ -37,34 +37,34 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">What Our Clients Say</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Trusted by industry leaders across Europe for our expertise and results
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Leaders Who've Tasted Victory</h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto font-medium">
+            Trusted by <strong className="text-blue-400">industry titans</strong> across Europe who demand nothing but excellence
           </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+            <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-blue-500/50 hover:bg-white/15 transition-all duration-300">
               <div className="flex items-center mb-4">
-                <Quote className="h-8 w-8 text-blue-400 mr-3" />
+                <Quote className="h-10 w-10 text-blue-400 mr-3" />
                 <div className="flex">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
               </div>
               
-              <p className="text-gray-300 leading-relaxed mb-6 italic">
+              <p className="text-gray-200 leading-relaxed mb-6 italic font-medium text-lg">
                 "{testimonial.quote}"
               </p>
               
-              <div className="border-t border-white/10 pt-4">
-                <p className="text-white font-semibold">{testimonial.author}</p>
-                <p className="text-blue-400 text-sm">{testimonial.role}</p>
+              <div className="border-t border-white/20 pt-4">
+                <p className="text-white font-bold text-lg">{testimonial.author}</p>
+                <p className="text-blue-400 font-medium">{testimonial.role}</p>
               </div>
             </div>
           ))}
