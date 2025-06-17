@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
+import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { StatsSection } from '@/components/StatsSection';
 import { AssessmentSection } from '@/components/AssessmentSection';
 import { ServicesSection } from '@/components/ServicesSection';
@@ -33,6 +34,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white overflow-hidden">
       <Navigation />
       <HeroSection mouse={mouse} isLoaded={isLoaded} />
+      <HowItWorksSection />
       <StatsSection />
       <AssessmentSection />
       <ServicesSection />

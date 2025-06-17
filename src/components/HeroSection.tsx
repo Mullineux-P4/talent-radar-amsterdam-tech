@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Users, Target, Zap } from 'lucide-react';
+import { Users, Target, Zap, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface HeroSectionProps {
   mouse: { x: number; y: number };
@@ -8,6 +9,13 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Amsterdam canal houses background with reduced blur */}
@@ -29,38 +37,54 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/40" />
       
-      <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
-            Amsterdam's New Powerhouse
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
+            Amsterdam's Premier
             <br />
-            <span className="text-white">for Scale-Up Talent</span>
+            <span className="text-white">Scale-Up Talent Partner</span>
           </h1>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Build Elite Teams Fast
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
-            We don't fill roles — we <strong className="text-white">deliver impact</strong>. 
-            Plug into a handpicked network of high-performers. Your next game-changer, deployed in under 48 hours.
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+            We connect ambitious scale-ups with exceptional talent. 
+            Deploy proven experts in <strong className="text-blue-300">48 hours</strong> or build your dream team in under 4 weeks.
           </p>
+
+          {/* Primary and Secondary CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16">
+            <Button 
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 text-lg w-full sm:w-auto"
+              onClick={() => scrollToSection('connect')}
+            >
+              Start Your Search
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg"
+              className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 font-semibold px-8 py-3 text-lg backdrop-blur-sm w-full sm:w-auto"
+              onClick={() => scrollToSection('how-it-works')}
+            >
+              See How It Works
+            </Button>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <Zap className="h-10 w-10 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Speed That Kills Competition</h3>
-              <p className="text-gray-200 font-medium">Deploy experts in 48 hours or hire full-time talent in &lt;4 weeks</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <Zap className="h-8 w-8 sm:h-10 sm:w-10 text-blue-400 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Rapid Deployment</h3>
+              <p className="text-sm sm:text-base text-gray-200 font-medium">Expert talent deployed in 48 hours or permanent hires in &lt;4 weeks</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <Target className="h-10 w-10 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Results That Matter</h3>
-              <p className="text-gray-200 font-medium">Impact-focused delivery that drives measurable ROI from day one</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <Target className="h-8 w-8 sm:h-10 sm:w-10 text-purple-400 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Impact-Focused</h3>
+              <p className="text-sm sm:text-base text-gray-200 font-medium">Results-driven professionals who deliver measurable ROI from day one</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <Users className="h-10 w-10 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-white">Elite Talent Only</h3>
-              <p className="text-gray-200 font-medium">Battle-tested professionals with proven track records</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <Users className="h-8 w-8 sm:h-10 sm:w-10 text-green-400 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Proven Excellence</h3>
+              <p className="text-sm sm:text-base text-gray-200 font-medium">Handpicked professionals with verified track records of success</p>
             </div>
           </div>
         </div>
