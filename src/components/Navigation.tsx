@@ -14,9 +14,10 @@ export function Navigation() {
             Projekt4
           </div>
           <div className="hidden md:flex space-x-8">
-            <a href="#intelligence" className="hover:text-blue-400 transition-colors duration-300">Intelligence</a>
             <a href="#approach" className="hover:text-blue-400 transition-colors duration-300">Approach</a>
+            <a href="#services" className="hover:text-blue-400 transition-colors duration-300">Services</a>
             <a href="#results" className="hover:text-blue-400 transition-colors duration-300">Results</a>
+            <a href="#testimonials" className="hover:text-blue-400 transition-colors duration-300">Testimonials</a>
             <a href="#connect" className="hover:text-blue-400 transition-colors duration-300">Connect</a>
           </div>
           <Button 

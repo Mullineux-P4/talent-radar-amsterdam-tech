@@ -4,7 +4,10 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
 import { StatsSection } from '@/components/StatsSection';
 import { AssessmentSection } from '@/components/AssessmentSection';
+import { ServicesSection } from '@/components/ServicesSection';
 import { CaseStudySection } from '@/components/CaseStudySection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { WhyChooseSection } from '@/components/WhyChooseSection';
 import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
 
@@ -32,7 +35,10 @@ const Index = () => {
       <HeroSection mouse={mouse} isLoaded={isLoaded} />
       <StatsSection />
       <AssessmentSection />
+      <ServicesSection />
       <CaseStudySection />
+      <TestimonialsSection />
+      <WhyChooseSection />
       <CTASection />
       <Footer />
     </div>
