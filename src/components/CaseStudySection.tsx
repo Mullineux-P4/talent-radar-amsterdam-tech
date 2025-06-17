@@ -45,6 +45,13 @@ export function CaseStudySection() {
     Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
+  const scrollToTestimonials = () => {
+    const testimonialsSection = document.getElementById('testimonials');
+    if (testimonialsSection) {
+      testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="results" className="py-20 bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6">
@@ -95,7 +102,11 @@ export function CaseStudySection() {
         </div>
         
         <div className="flex justify-center">
-          <Button size="lg" className="bg-white text-black hover:bg-gray-200 font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+          <Button 
+            size="lg" 
+            className="bg-white text-black hover:bg-gray-200 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={scrollToTestimonials}
+          >
             View All Victory Stories
             <ChevronRight className="ml-2 h-5 w-5" />
           </Button>
