@@ -16,9 +16,13 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <button 
             onClick={scrollToTop}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-purple-300 transition-all duration-300"
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300"
           >
-            Projekt4
+            <img 
+              src="/lovable-uploads/82d770a0-4c87-41cb-9c0e-634b4b98f8f1.png" 
+              alt="Projekt4" 
+              className="h-10 w-auto"
+            />
           </button>
           <div className="hidden md:flex space-x-8">
             <a href="#approach" className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Approach</a>
@@ -30,11 +34,11 @@ export function Navigation() {
           <div className="relative">
             <Button 
               variant="outline" 
-              className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold backdrop-blur-sm relative overflow-hidden animate-pulse"
+              className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold backdrop-blur-sm relative overflow-hidden"
               onClick={() => setIsModalOpen(true)}
             >
               <span className="relative z-10">Schedule Consultation</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-30 animate-pulse"></div>
             </Button>
           </div>
