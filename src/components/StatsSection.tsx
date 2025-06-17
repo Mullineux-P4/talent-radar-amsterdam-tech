@@ -28,7 +28,7 @@ export function StatsSection() {
           <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
             <CardContent className="p-8 text-center">
               <div className="text-4xl font-bold text-blue-400 mb-4">
-                €<AnimatedCounter end={2.4} />B
+                €<AnimatedCounter end={2.4} decimals={1} duration={2500} />B
               </div>
               <h3 className="text-xl font-semibold mb-2 text-zinc-50">Startup Funding</h3>
               <p className="text-gray-400">Invested in Amsterdam startups this year</p>
@@ -38,7 +38,7 @@ export function StatsSection() {
           <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
             <CardContent className="p-8 text-center">
               <div className="text-4xl font-bold text-purple-400 mb-4">
-                <AnimatedCounter end={15000} formatNumber={true} />+
+                <AnimatedCounter end={15000} formatNumber={true} duration={3000} />+
               </div>
               <h3 className="text-xl font-semibold mb-2 text-zinc-50">Tech Professionals</h3>
               <p className="text-gray-400">Active in Amsterdam's ecosystem</p>
@@ -48,7 +48,7 @@ export function StatsSection() {
           <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
             <CardContent className="p-8 text-center">
               <div className="text-4xl font-bold text-green-400 mb-4">
-                <AnimatedCounter end={89} />%
+                <AnimatedCounter end={89} duration={2200} />%
               </div>
               <h3 className="text-xl font-semibold mb-2 text-zinc-50">Success Rate</h3>
               <p className="text-gray-400">Of our placements still thriving after 2 years</p>
