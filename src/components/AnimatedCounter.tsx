@@ -4,9 +4,10 @@ import React, { useEffect, useState } from 'react';
 interface AnimatedCounterProps {
   end: number;
   duration?: number;
+  formatNumber?: boolean;
 }
 
-export function AnimatedCounter({ end, duration = 2000 }: AnimatedCounterProps) {
+export function AnimatedCounter({ end, duration = 2000, formatNumber = false }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   
   useEffect(() => {
@@ -20,5 +21,6 @@ export function AnimatedCounter({ end, duration = 2000 }: AnimatedCounterProps) 
     requestAnimationFrame(animate);
   }, [end, duration]);
   
-  return <span>{count}</span>;
+  const displayValue = formatNumber ? count.toLocaleString() : count;
+  return <span>{displayValue}</span>;
 }

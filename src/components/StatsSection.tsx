@@ -1,12 +1,15 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { AnimatedCounter } from './AnimatedCounter';
+
 export function StatsSection() {
-  return <section className="py-20 relative overflow-hidden">
+  return (
+    <section className="py-20 relative overflow-hidden">
       {/* Amsterdam canal background - using uploaded image with less blur */}
       <div className="absolute inset-0 bg-cover bg-center opacity-60 blur-[1px]" style={{
-      backgroundImage: `url('/lovable-uploads/00611a60-bd1f-4a90-9a7d-f3a40e8022d3.png')`
-    }} />
+        backgroundImage: `url('/lovable-uploads/00611a60-bd1f-4a90-9a7d-f3a40e8022d3.png')`
+      }} />
       
       {/* Tech-inspired overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-blue-900/80 to-black/80" />
@@ -35,7 +38,7 @@ export function StatsSection() {
           <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
             <CardContent className="p-8 text-center">
               <div className="text-4xl font-bold text-purple-400 mb-4">
-                <AnimatedCounter end={15000} />+
+                <AnimatedCounter end={15000} formatNumber={true} />+
               </div>
               <h3 className="text-xl font-semibold mb-2 text-zinc-50">Tech Professionals</h3>
               <p className="text-gray-400">Active in Amsterdam's ecosystem</p>
@@ -53,5 +56,6 @@ export function StatsSection() {
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
