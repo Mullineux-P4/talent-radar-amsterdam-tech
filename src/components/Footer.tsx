@@ -10,7 +10,7 @@ export function Footer() {
             Projekt4
           </div>
           <div className="text-gray-400">
-            © 2024 Projekt4. Transforming Amsterdam's tech talent landscape.
+            © 2025 Projekt4. Transforming Amsterdam's tech talent landscape.
           </div>
         </div>
       </div>
