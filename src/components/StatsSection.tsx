@@ -6,11 +6,11 @@ import { AnimatedCounter } from './AnimatedCounter';
 export function StatsSection() {
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* TNW City background */}
+      {/* Amsterdam canal background - using uploaded image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundImage: `url('/lovable-uploads/00611a60-bd1f-4a90-9a7d-f3a40e8022d3.png')`,
         }}
       />
       
