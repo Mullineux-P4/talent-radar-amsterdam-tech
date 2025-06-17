@@ -37,7 +37,7 @@ export function StatsSection() {
               <div className="text-4xl font-bold text-purple-400 mb-4">
                 <AnimatedCounter end={15000} />+
               </div>
-              <h3 className="text-xl font-semibold mb-2">Tech Professionals</h3>
+              <h3 className="text-xl font-semibold mb-2 text-zinc-50">Tech Professionals</h3>
               <p className="text-gray-400">Active in Amsterdam's ecosystem</p>
             </CardContent>
           </Card>
@@ -47,7 +47,7 @@ export function StatsSection() {
               <div className="text-4xl font-bold text-green-400 mb-4">
                 <AnimatedCounter end={89} />%
               </div>
-              <h3 className="text-xl font-semibold mb-2">Success Rate</h3>
+              <h3 className="text-xl font-semibold mb-2 text-zinc-50">Success Rate</h3>
               <p className="text-gray-400">Of our placements still thriving after 2 years</p>
             </CardContent>
           </Card>
