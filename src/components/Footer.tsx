@@ -11,7 +11,7 @@ export function Footer() {
             <img 
               src="/lovable-uploads/82d770a0-4c87-41cb-9c0e-634b4b98f8f1.png" 
               alt="Projekt4" 
-              className="h-8 w-auto"
+              className="h-8 w-auto bg-white/10 backdrop-blur-sm rounded-lg p-2"
             />
           </div>
           <div className="flex items-center space-x-6">
