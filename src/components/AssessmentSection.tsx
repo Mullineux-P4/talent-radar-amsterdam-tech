@@ -1,72 +1,68 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, Target, Users, Zap } from 'lucide-react';
+import { ConsultationModal } from '@/components/ConsultationModal';
 
 export function AssessmentSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const approaches = [
+    {
+      icon: Target,
+      title: "Beyond the Resume",
+      description: "We assess cultural fit, growth potential, and passion projects that traditional hiring misses. 78% of our placements come from candidates who weren't actively looking."
+    },
+    {
+      icon: Users,
+      title: "Amsterdam Network Intelligence",
+      description: "Deep connections in Amsterdam's tech ecosystem. We know who's building what, who's ready to move, and what motivates top talent in our city."
+    },
+    {
+      icon: Zap,
+      title: "Speed with Precision",
+      description: "Our 3-week average time-to-hire doesn't compromise on quality. We pre-qualify candidates through technical and cultural assessments before any introduction."
+    }
+  ];
+
   return (
-    <section className="py-20">
+    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Beyond the Resume
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Traditional metrics tell you what someone has done. We reveal what they're capable of becoming.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-blue-400 rounded-full mt-3"></div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Cultural Intelligence</h3>
-                  <p className="text-gray-400">How they navigate Amsterdam's unique blend of directness and collaboration</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-purple-400 rounded-full mt-3"></div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Growth Trajectory</h3>
-                  <p className="text-gray-400">Their learning velocity and adaptation to scale-up environments</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-green-400 rounded-full mt-3"></div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Innovation Mindset</h3>
-                  <p className="text-gray-400">How they approach problems that don't have Stack Overflow answers</p>
-                </div>
-              </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            The Projekt4 Approach
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Traditional recruitment focuses on matching keywords. We focus on matching futures. 
+            Here's how we find the 5% of candidates others never see.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {approaches.map((approach, index) => (
+            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+              <approach.icon className="h-12 w-12 text-blue-400 mb-6" />
+              <h3 className="text-xl font-bold mb-4">{approach.title}</h3>
+              <p className="text-gray-300 leading-relaxed">{approach.description}</p>
             </div>
-          </div>
-          
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-              <h3 className="text-2xl font-bold mb-6">Traditional vs. Projekt4 Assessment</h3>
-              
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b border-white/10">
-                  <span className="text-gray-400">Years of Experience</span>
-                  <span className="text-blue-400">→ Learning Velocity</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-white/10">
-                  <span className="text-gray-400">Technical Skills</span>
-                  <span className="text-purple-400">→ Problem-Solving Approach</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-white/10">
-                  <span className="text-gray-400">Previous Companies</span>
-                  <span className="text-green-400">→ Cultural Adaptability</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="text-gray-400">Education</span>
-                  <span className="text-yellow-400">→ Curiosity & Growth</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
+        
+        <div className="text-center">
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
+            onClick={() => setIsModalOpen(true)}
+          >
+            See Our Approach in Action
+          </Button>
         </div>
       </div>
+      
+      <ConsultationModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 }
