@@ -10,9 +10,9 @@ interface HeroSectionProps {
 export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Amsterdam canal houses blurred background */}
+      {/* Amsterdam canal houses background with reduced blur */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30 blur-sm"
+        className="absolute inset-0 bg-cover bg-center opacity-40 blur-[2px]"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
         }}
