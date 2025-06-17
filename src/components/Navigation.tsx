@@ -27,13 +27,17 @@ export function Navigation() {
             <a href="#testimonials" className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Testimonials</a>
             <a href="#connect" className="text-white hover:text-blue-400 transition-colors duration-300 font-medium">Connect</a>
           </div>
-          <Button 
-            variant="outline" 
-            className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold backdrop-blur-sm"
-            onClick={() => setIsModalOpen(true)}
-          >
-            Schedule Consultation
-          </Button>
+          <div className="relative">
+            <Button 
+              variant="outline" 
+              className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold backdrop-blur-sm relative overflow-hidden animate-pulse"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <span className="relative z-10">Schedule Consultation</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-30 animate-pulse"></div>
+            </Button>
+          </div>
         </div>
       </div>
       

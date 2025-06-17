@@ -6,9 +6,9 @@ import { AnimatedCounter } from './AnimatedCounter';
 export function StatsSection() {
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Amsterdam canal background - using uploaded image */}
+      {/* Amsterdam canal background - using uploaded image with less blur */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-40"
+        className="absolute inset-0 bg-cover bg-center opacity-60 blur-[1px]"
         style={{
           backgroundImage: `url('/lovable-uploads/00611a60-bd1f-4a90-9a7d-f3a40e8022d3.png')`,
         }}
