@@ -31,7 +31,7 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
       
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
             Amsterdam's New Powerhouse
             <br />
             <span className="text-white">for Scale-Up Talent</span>
