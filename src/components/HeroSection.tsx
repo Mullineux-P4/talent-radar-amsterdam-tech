@@ -10,6 +10,14 @@ interface HeroSectionProps {
 export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Amsterdam canal houses blurred background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-30 blur-sm"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+        }}
+      />
+      
       {/* Enhanced background with better contrast */}
       <div 
         className="absolute inset-0 opacity-20"
@@ -17,6 +25,9 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
           background: `radial-gradient(circle at ${50 + mouse.x * 10}% ${50 + mouse.y * 10}%, rgba(59, 130, 246, 0.4) 0%, transparent 60%)`,
         }}
       />
+      
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/40" />
       
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

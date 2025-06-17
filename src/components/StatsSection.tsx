@@ -5,8 +5,19 @@ import { AnimatedCounter } from './AnimatedCounter';
 
 export function StatsSection() {
   return (
-    <section className="py-20 bg-black/20 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 relative overflow-hidden">
+      {/* TNW City background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-40"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+        }}
+      />
+      
+      {/* Tech-inspired overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-blue-900/80 to-black/80" />
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             The Amsterdam Advantage
