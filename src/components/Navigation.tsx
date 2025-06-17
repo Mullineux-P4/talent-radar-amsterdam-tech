@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ConsultationModal } from '@/components/ConsultationModal';
@@ -33,12 +32,10 @@ export function Navigation() {
           </div>
           <div className="relative">
             <Button 
-              variant="outline" 
-              className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold backdrop-blur-sm relative overflow-hidden"
+              className="bg-white text-black hover:bg-gray-100 font-semibold relative overflow-hidden"
               onClick={() => setIsModalOpen(true)}
             >
               <span className="relative z-10">Schedule Consultation</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-30 animate-pulse"></div>
             </Button>
           </div>
