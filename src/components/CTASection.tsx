@@ -20,7 +20,7 @@ export function CTASection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             onClick={() => setIsModalOpen(true)}
           >
             Deploy Experts Now
@@ -28,7 +28,7 @@ export function CTASection() {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-3 font-semibold backdrop-blur-sm"
+            className="border-2 border-blue-400 bg-transparent text-blue-400 hover:bg-blue-400 hover:text-black text-lg px-8 py-3 font-semibold backdrop-blur-sm transition-all duration-300"
             onClick={() => setIsModalOpen(true)}
           >
             Discuss Your Challenge
