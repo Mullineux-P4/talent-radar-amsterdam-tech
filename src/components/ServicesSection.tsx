@@ -43,24 +43,24 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-20 bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Three Ways We Accelerate Victory</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto font-medium">
             Flexible engagement models designed to <strong className="text-blue-400">crush your competition</strong> and unlock exponential growth
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-blue-500/50 hover:bg-white/15 transition-all duration-300 h-full">
-              <service.icon className="h-14 w-14 text-blue-400 mb-6" />
-              <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
-              <p className="text-gray-200 mb-6 font-medium text-lg">{service.subtitle}</p>
-              <ul className="space-y-4">
+            <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:border-blue-500/50 hover:bg-white/15 transition-all duration-300">
+              <service.icon className="h-10 w-10 text-blue-400 mb-4" />
+              <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
+              <p className="text-gray-200 mb-4 text-sm font-medium">{service.subtitle}</p>
+              <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <span className="text-gray-200 font-medium">{feature}</span>
+                  <li key={featureIndex} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-200 text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
