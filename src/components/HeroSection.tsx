@@ -12,6 +12,13 @@ interface HeroSectionProps {
 export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
+  const scrollToTestimonials = () => {
+    const testimonialsSection = document.getElementById('testimonials');
+    if (testimonialsSection) {
+      testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Enhanced background with better contrast */}
@@ -38,7 +45,7 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => setIsModalOpen(true)}
             >
               Deploy Experts in 48 Hours
@@ -47,7 +54,8 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-2 border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4 font-semibold backdrop-blur-sm"
+              className="border-2 border-blue-400 bg-transparent text-blue-400 hover:bg-blue-400 hover:text-black text-lg px-8 py-4 font-semibold backdrop-blur-sm transition-all duration-300"
+              onClick={scrollToTestimonials}
             >
               View Success Stories
             </Button>
