@@ -1,8 +1,6 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Target, Zap } from 'lucide-react';
-import { ConsultationModal } from '@/components/ConsultationModal';
+import { Users, Target, Zap } from 'lucide-react';
 
 interface HeroSectionProps {
   mouse: { x: number; y: number };
@@ -10,15 +8,6 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
-
-  const scrollToTestimonials = () => {
-    const testimonialsSection = document.getElementById('testimonials');
-    if (testimonialsSection) {
-      testimonialsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Enhanced background with better contrast */}
@@ -42,25 +31,6 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
             Access the talent market's elite in 48 hours.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Deploy Experts in 48 Hours
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-blue-400 bg-transparent text-blue-400 hover:bg-blue-400 hover:text-black text-lg px-8 py-4 font-semibold backdrop-blur-sm transition-all duration-300"
-              onClick={scrollToTestimonials}
-            >
-              View Success Stories
-            </Button>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <Zap className="h-10 w-10 text-blue-400 mx-auto mb-4" />
@@ -80,11 +50,6 @@ export function HeroSection({ mouse, isLoaded }: HeroSectionProps) {
           </div>
         </div>
       </div>
-      
-      <ConsultationModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-      />
     </section>
   );
 }
