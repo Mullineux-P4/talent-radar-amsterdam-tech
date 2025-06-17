@@ -17,14 +17,7 @@ export function CTASection() {
           Deploy game-changers in 48 hours or build your dream team in under 4 weeks.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            onClick={() => setIsModalOpen(true)}
-          >
-            Deploy Experts Now
-          </Button>
+        <div className="flex justify-center">
           <Button 
             variant="outline" 
             size="lg" 
