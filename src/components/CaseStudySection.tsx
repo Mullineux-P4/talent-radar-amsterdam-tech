@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, TrendingDown, Zap, Target } from 'lucide-react';
@@ -95,18 +94,10 @@ export function CaseStudySection() {
           <p className="text-blue-400 font-bold mt-3">— Operational Excellence and Digitalisation Lead</p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           <Button size="lg" className="bg-white text-black hover:bg-gray-200 font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
             View All Victory Stories
             <ChevronRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold backdrop-blur-sm"
-            onClick={() => setIsModalOpen(true)}
-          >
-            Start Your Transformation
           </Button>
         </div>
       </div>
